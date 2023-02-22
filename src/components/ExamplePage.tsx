@@ -7,6 +7,7 @@ import {
   TextContent,
   Title,
 } from '@patternfly/react-core';
+import * as DynamicPluginSDK from '@openshift-console/dynamic-plugin-sdk'
 import './example.css';
 
 export default function ExamplePage() {
@@ -37,8 +38,9 @@ export default function ExamplePage() {
         <PageSection variant="light">
           <TextContent>
             <Text component="p">
-              <span className="console-plugin-template__nice">Nice!</span> Here
-              is a cat fact:
+              <span className="console-plugin-template__nice">Nice!</span>
+              <span>Here is a cat fact:</span>
+              <DynamicPluginSDK.GreenCheckCircleIcon />
             </Text>
             <Text component="p">
               {loading ? '(Cat fact is loading...)' : catFact}
